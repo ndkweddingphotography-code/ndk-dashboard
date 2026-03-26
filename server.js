@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const { google } = require('googleapis');
 const cors = require('cors');
@@ -7,7 +8,7 @@ app.use(cors());
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
-  res.sendFile('dashboard.html', { root: __dirname });
+  res.sendFile(path.join(__dirname, 'dashboard.html'));
 });
 
 const CLIENT_ID = process.env.CLIENT_ID;
