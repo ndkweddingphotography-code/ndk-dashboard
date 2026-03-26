@@ -10,6 +10,15 @@ app.use(express.static(__dirname));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dashboard.html'));
 });
+app.get('/data', (req, res) => {
+  res.json({
+    rows: [
+      { keys: ['Glasgow property photography'], position: 3 },
+      { keys: ['Drone video Glasgow'], position: 5 },
+      { keys: ['Commercial photography Scotland'], position: 2 }
+    ]
+  });
+});
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
