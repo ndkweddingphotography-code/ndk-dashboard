@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/dashboard.html');
+  res.sendFile('dashboard.html', { root: __dirname });
 });
 
 const CLIENT_ID = process.env.CLIENT_ID;
