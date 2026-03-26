@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const REDIRECT_URI = 'http://localhost:3000/callback';
+const REDIRECT_URI = 'https://ndk-dashboard.onrender.com/callback';
 
 const oauth2Client = new google.auth.OAuth2(
   CLIENT_ID,
